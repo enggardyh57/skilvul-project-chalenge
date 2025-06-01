@@ -1,0 +1,398 @@
+/* Tambahkan kode CSS kalian di file ini */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+/* Style nav */
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 75px;
+  background-color: #bd1900;
+  align-items: center;
+  color: #ffffff;
+}
+
+nav h4 {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+  font-size: 1.8em;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 40%;
+  font-size: 0.9em;
+  font-size: 18px;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+/* menu toogle */
+.menu-toogle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30px;
+  position: relative;
+}
+.menu-toogle input {
+  position: absolute;
+  width: 34px;
+  height: 33px;
+  opacity: 0;
+  top: -5px;
+  left: -2px;
+  z-index: 2;
+}
+.menu-toogle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fdfdfd;
+  transition: all 0.5s;
+}
+/* Animasi menu toogle */
+.menu-toogle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toogle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toogle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, 1px);
+}
+.menu-toogle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, -1px);
+}
+.menu-toogle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* Img hero */
+.hero {
+  background-image: url(https://asset-2.tstatic.net/tribunnews/foto/bank/images/ilustrasi-bakso-sapi.jpg);
+  background-size: cover;
+  height: 600px;
+}
+
+/* Beranda */
+main {
+  margin: 10px;
+}
+
+.beranda {
+  margin: 40px 0;
+  color: #bd1900;
+  text-align: center;
+}
+
+.beranda h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.beranda p {
+  padding: 20px 100px;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.about {
+  display: flex;
+  gap: 20px;
+}
+.pemesanan {
+  flex: 2;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  height: fit-content;
+}
+.pemesanan h3 {
+  background-color: #bd1900;
+  padding: 10px;
+  color: white;
+}
+.pemesanan p {
+  margin: 10px 0;
+}
+
+.about button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.about button:hover {
+  background-color: rgb(62, 62, 62);
+}
+
+.konten {
+  flex: 3;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.konten a {
+  text-decoration: none;
+  color: white;
+}
+
+.konten .post {
+  color: rgb(143, 143, 143);
+}
+
+.info {
+  flex: 2;
+  padding: 10px;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info h3 {
+  background-color: #bd1900;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.jadwal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid black;
+  height: fit-content;
+  padding: 10px;
+}
+
+.berita {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid black;
+  height: fit-content;
+  padding: 10px;
+}
+.berita hr {
+  opacity: 0.2;
+}
+
+.berita p {
+  cursor: pointer;
+}
+.berita p:hover {
+  text-decoration: underline;
+}
+
+#menu {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+.menu h2 {
+  font-weight: bold;
+}
+.menu-bakso {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu-bakso div {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #bd1900;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#kontak {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#kontak h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+#kontak p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contact input[type="text"],
+.form-contact input[type="email"],
+.form-contact input[type="number"] {
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-contact input[type="text"]:focus,
+.form-contact input[type="email"]:focus,
+.form-contact input[type="number"]:focus {
+  outline: none;
+  border-color: #3b82f6; /* biru terang */
+  box-shadow: 0 0 5px #3b82f6;
+}
+
+#check {
+  font-size: 0.9rem;
+  color: #444;
+  display: inline-block;
+  margin-bottom: 6px;
+  user-select: none;
+}
+
+#status {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  accent-color: #bd1900;
+}
+
+#submit-form {
+  background-color: #bd1900;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-form:hover {
+  background-color: #d9534f;
+}
+
+#warning {
+  margin-top: 10px;
+  color: #d9534f;
+  font-weight: 600;
+  min-height: 18px;
+  text-align: center;
+}
+
+footer {
+  background-color: #bd1900;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 40px;
+  user-select: none;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #kontak {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+}
+
+/* Mode Responsive */
+/* mode tablet */
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  nav ul {
+    width: 60%;
+  }
+}
+
+/* mode hp */
+@media screen and (max-width: 640px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #bd1900;
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: space-evenly;
+    height: 100vh;
+    z-index: -1;
+    align-items: center;
+    transform: translate-x(100%);
+    opacity: 0;
+    width: 80%;
+    transition: all 0.9s;
+  }
+  nav ul.slide {
+    transform: translate-x(0);
+    opacity: 1;
+  }
+  .menu-toogle {
+    display: flex;
+  }
+
+  .beranda {
+    margin: 0;
+    text-align: left;
+  }
+  .hero {
+    background-position: center;
+  }
+  .beranda p {
+    display: none;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+  .about img {
+    width: 100%;
+  }
+  .menu-bakso {
+    flex-direction: column;
+  }
+  .menu-bakso div {
+    align-items: center;
+    justify-content: center;
+  }
+}
